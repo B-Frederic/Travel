@@ -1,0 +1,111 @@
+@import "../../../settings";
+
+.container {
+
+    &-header {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 10;
+        position: fixed;
+        width: 100%;
+        padding: 1rem;
+        background: var(--whiteColor2);
+        box-shadow: 0 2px 4px rgba(2, 15, 29, 0.25);
+
+
+        &--title {
+            font-weight: 600;
+            cursor: pointer;
+
+            .icon {
+                color: var(--primaryColor);
+                transform: translateY(0.35rem);
+                cursor: pointer;
+            }
+        }
+
+        &--navbar {
+
+            &-responsive {   
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    padding: 0 0.8rem;
+
+                    a {
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        color: var(--textColor);
+
+                        &:hover {
+                            color: var(--primaryColor);
+                        }
+                    }
+                }
+
+                button {
+                    @include button;
+                    margin: 1rem 0;
+                    font-weight: 600;
+                }
+            }
+
+            &-close {
+                display: none;
+            }
+        }
+
+        @media (max-width: 900px){
+            .container-header--navbar {
+                z-index: 20;
+                display: none;
+                position: absolute;
+                top: 6rem;
+                left: 50%;
+                height: max-content;
+                width: 80%;
+                border-radius: 1rem;
+                background: var(--whiteColor2);
+                transform: translate(-50%);
+                box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+                
+                ul {
+                    @include flex;
+                    flex-direction: column;
+                    
+                    li {
+                        padding: 0.8rem 0;
+
+                        &:nth-child(1){
+                            margin-top: 4rem;
+                        }
+                    }
+                }
+
+                &.active {
+                    display: block;
+                }
+
+                &-responsive {   
+                    display: block;
+                }
+
+                &-close {
+                    display: block;
+                    position: absolute;
+                    top: 0.5rem;
+                    right: 0.5rem;
+                    color: var(--primaryColor);
+                }
+            }
+        }
+    }
+
+}

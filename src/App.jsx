@@ -1,8 +1,11 @@
+// Components
+import Navbar from "./components/layout/Header";
+
 
 const App = () => {
   return (
     <div>
-      Voyage
+      <Navbar />
     </div>
   );
 };
