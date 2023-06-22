@@ -38,15 +38,16 @@
 
                 li {
                     padding: 0 0.8rem;
-
+                    
                     a {
                         font-size: 1.1rem;
                         font-weight: 600;
                         color: var(--textColor);
 
-                        &:hover {
-                            color: var(--primaryColor);
-                        }
+                    }
+
+                    &:hover {
+                        color: var(--primaryColor);
                     }
                 }
 
@@ -54,6 +55,10 @@
                     @include button;
                     margin: 1rem 0;
                     font-weight: 600;
+
+                    &:hover {
+                        background: var(--primaryColor);
+                    }
                 }
             }
 
