@@ -3,16 +3,21 @@ import { GrLocation } from "react-icons/gr";
 import { HiFilter } from "react-icons/hi";
 // Video
 import video from "../assets/beach.mp4";
+import { useState } from "react";
 
-const Home = () => {
+const Filter = () => {
+
+    const [rangeValue, setRangeValue]= useState(500);
+
+    
+
     return (
         <section className="container-home">
             <div className="container-home--overlay"></div>
             <video src={video} muted autoPlay loop type="video/mp4"></video>
             <div className="container-home--content">
                 <div className="container-home--content-text">
-                    <p>Tarifs</p>
-                    <h2>Trouvez vos vacances de rêve</h2>
+                    <h2>Trouvez vos<span> vacances de rêve</span></h2>
                 </div>
                 <div className="container-home--content-card">
                     <div className="container-home--content-card-destination">
@@ -31,15 +36,15 @@ const Home = () => {
                     <div className="container-home--content-card-price">
                         <div className="price">
                             <label htmlFor="price">Prix max :</label>
-                            <h3>2000 €</h3>
+                            <h3>{rangeValue} €</h3>
                         </div>
                         <div className="input">
-                            <input type="range" min="2000" max="5000" />
+                            <input type="range" min="500" max="4000" onChange={(event) => setRangeValue(event.target.value)}/>
                         </div>
                     </div>
                     <div className="container-home--content-card-filter">
                         <HiFilter className="icon" />
-                        <span>Filtre avancé</span>
+                        <span>Filtre</span>
                     </div>
                 </div>
             </div>
@@ -47,4 +52,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Filter;

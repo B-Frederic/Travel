@@ -30,7 +30,6 @@ const Header = () => {
                         <li><a href="#">Populaires</a></li>
                         <li><a href="#">A propos</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><button>Réserver</button></li>
                     </ul>
                     <div className="container-header--navbar-close">
                         <AiFillCloseCircle className="icon" onClick={handleClose}/>
