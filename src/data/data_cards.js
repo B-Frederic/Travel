@@ -1,4 +1,4 @@
-import { borabora, machuPicchu, greatBarrierReef, cappadocia, guanajuato, cinqueTerre, angkorWat, tajMahal, bali } from "../assets";
+import { borabora, machuPicchu, greatBarrierReef, cappadocia, guanajuato, cinqueTerre, angkorWat, tajMahal, bali, everest, savane, boeral } from "../assets";
 
 const travelCards = [
     {
@@ -71,6 +71,30 @@ const travelCards = [
         location: "Inde",
         rating: "4/5",
         price: "2780 €",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam fuga qui rem quasi libero placeat eaque accusamus culpa fugiat minima.",    
+    },
+    {
+        imgSrc: `${everest}` ,
+        destination: "Everest",
+        location: "Asie",
+        rating: "4/5",
+        price: "1820 €",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam fuga qui rem quasi libero placeat eaque accusamus culpa fugiat minima.",    
+    },
+    {
+        imgSrc: `${savane}` ,
+        destination: "Safari",
+        location: "Afrique",
+        rating: "5/5",
+        price: "560 €",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam fuga qui rem quasi libero placeat eaque accusamus culpa fugiat minima.",    
+    },
+    {
+        imgSrc: `${boeral}` ,
+        destination: "Féerie Borédale",
+        location: "Islande",
+        rating: "5/5",
+        price: "1220 €",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam fuga qui rem quasi libero placeat eaque accusamus culpa fugiat minima.",    
     },
 ]
