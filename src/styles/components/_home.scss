@@ -1,6 +1,7 @@
 @import "../../settings";
 
 .container-home {
+
     @include flex;
     position: relative;
     width: 100%;
