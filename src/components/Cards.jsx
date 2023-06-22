@@ -1,17 +1,37 @@
+// React
+import { useEffect, useState } from "react";
 // Data
 import travelCards from "../data/data_cards";
 // React icons
 import { HiOutlineLocationMarker, HiOutlineClipboardCheck } from "react-icons/hi";
+import { AiOutlineArrowUp } from "react-icons/ai";
 import { RiStarSFill } from "react-icons/ri";
 
 
 const Cards = () => {
+
+    const [scrolling, setScrolling] = useState(false);
+    const [scrollTop, setScrollTop] = useState(0);
+
+    useEffect(() => {
+
+        const onScroll = (event) => {
+          setScrollTop(event.target.documentElement.scrollTop);
+          setScrolling(event.target.documentElement.scrollTop > 1400);
+        };
+    
+        window.addEventListener("scroll", onScroll);
+    
+        return () => window.removeEventListener("scroll", onScroll);
+    
+      }, [scrollTop]);
+
     return (
         <div className="container-cards">
             <div className="container-cards--title">
                 <h3>Les destinations <span>les plus visitée</span></h3>
             </div>
-            <div className="container-cards--grid">
+            <div className="container-cards--box">
                 {
                     travelCards.map((element, index) => (
                         <div className="container-cards--card" key={index}>
@@ -34,6 +54,13 @@ const Cards = () => {
                     ))
                 }
             </div>
+            {
+                scrolling && (
+                    <div className="container-cards--top">
+                        < AiOutlineArrowUp onClick={() => window.scrollTo(0, 0)} />
+                    </div>
+                )
+            }
         </div>
     );
 };
