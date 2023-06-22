@@ -9,7 +9,7 @@ const Cards = () => {
     return (
         <div className="container-cards">
             <div className="container-cards--title">
-                <h3>Les destinations les plus visitée</h3>
+                <h3>Les destinations <span>les plus visitée</span></h3>
             </div>
             <div className="container-cards--grid">
                 {
