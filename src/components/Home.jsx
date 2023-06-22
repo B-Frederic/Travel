@@ -11,7 +11,7 @@ const Home = () => {
             <video src={video} muted autoPlay loop type="video/mp4"></video>
             <div className="container-home--content">
                 <div className="container-home--content-text">
-                    <p>Nos tarifs</p>
+                    <p>Tarifs</p>
                     <h2>Trouvez vos vacances de rêve</h2>
                 </div>
                 <div className="container-home--content-card">
